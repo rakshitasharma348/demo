@@ -1,0 +1,18 @@
+<template><lightning-card  title="Create Customer"></lightning-card>
+    <lightning-card title="Choose Account-type" if:true={picklistShow}>
+        <lightning-combobox label="choose one" value={selectedAccountType} options={accountTypeOptions} required onchange={handlePicklistChange} >
+          
+        </lightning-combobox>
+        <lightning-button label="next" onclick={handleClick}></lightning-button>
+    
+    
+    <lightning-record-form if:true={customerFieldShow}
+    object-api-name="Customer__c"
+    columns="2"
+    fields={fields}
+    onerror={hndleError}
+    onsuccess={handleSuccess}
+    onload={handleFormLoad}></lightning-record-form>
+</lightning-card>
+    
+</template>

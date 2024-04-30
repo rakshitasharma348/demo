@@ -1,0 +1,122 @@
+<template>
+    <div class="main-container slds-box">
+        <div class="custom-container">
+            <div class="fdiv"></div>
+            <div class="sdiv">
+                <div class="tdiv">
+                   <div class="gr-div"></div>
+                   <div class="myclass"> LGE Earth Week Assembly Registration</div>
+                   <div class="next-div">
+                    <ol>
+                        <li>1. Fill out this form </li>
+                        <li>2.We send you the Zoom Webinar based on your form answers (<b>check spam for email from schools@letsgoeco.live!</b>) </li>
+                        <li>3.Your students and staff are empowered and inspired to change the world this Earth Week!</li>
+                        <li>4.Give yourself a pat on the back because YOU ROCK</li>
+                        <li>**If you want to split your school into multiple shows due to scheduling, indicate which grades you want when in the comments section**</li>
+                    </ol>
+                    <br>
+                    There is NO COST to your school. Our in-person assembly business, The EcoHero show is sponsoring the event :
+                    <div class="divContainer"></div>
+                    <div class="mail-div">
+                        <span class="mail-span">rakshitasharma348@gmail.com 
+                        <a href="https://accounts.google.com/AccountChooser/signinchooser?continue=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2F1CifvUd9IyeRfu0AUJTUEt_2RCvGhzkS-whGGJ_Z36yE%2Fviewform%3Fedit_requested%3Dtrue&service=wise&theme=glif&flowName=GlifWebSignIn&flowEntry=AccountChooser">Switch account</a>
+                    </span>
+                    </div>
+                        <div class="divContainer"></div>
+                    <div class="red-div"> * Indicates required question</div>
+                   </div>
+                </div>
+                <template for:each={mapObjects} for:item="box">
+                    <div class="input-div" key={box}>
+                        <span class="inside-span">  {box.heading}  </span>
+                        <span class="req-span">*</span>
+                        <div class="inputfield-div">
+                          <lightning-input  class="input-no-border"   type={box.type}   placeholder="Your Answer" name="Enter name" ></lightning-input>  
+                          <!-- <hr style="border-color: grey; border-style:solid; width : 50%;"> -->
+                         </div>
+                         
+                        </div>
+                </template>
+                <div class="input-div">
+                    <span class="inside-span"> Who are you signing up for?</span>
+                    <span class="req-span">*</span>
+                    <div class="inputfield-div">
+                    <lightning-combobox class="input-no-border"
+                       name="signing"
+                        value={value}
+                        options={signingPicklist}
+                        onchange={handleChange1}
+                        ></lightning-combobox>
+                </div>
+            </div>
+                <div class="input-div">
+                    <span class="inside-span">  Webinar you will join</span>
+                    <span class="req-span">*</span>
+                    <div class="inputfield-div">
+                    <lightning-combobox class="input-no-border"
+                       name="progress"
+                        value={value}
+                        options={optionPicklist}
+                        onchange={handleChange2} ></lightning-combobox>
+                </div>
+            </div>
+                <div class="input-div">
+                    <span class="inside-span"> How will your school view the stream? </span>
+                    <span class="req-span">*</span>
+                    <lightning-checkbox-group name="Checkbox Group"
+                    options={checkboxOptionslist}
+                    value={value1}
+                    onchange={handleChange3}></lightning-checkbox-group>
+                </div>
+                <div class="input-div">
+                    <span class="inside-span">Comments/Questions or anything else we should know?  </span>
+                    <div class="inputfield-div">
+                        
+                    <lightning-input  class="input-no-border" type="text"   placeholder="Your Answer" name="Enter name"></lightning-input>
+                
+                </div>
+                </div>
+                <div class="input-div">
+                    <span class="inside-span">I understand the following </span>
+                    <span class="req-span">*</span>
+                        <lightning-input class="slds-p-left_xx-large" type="checkbox" label="The webinar link will be emailed to me and I’ll check spam for it" onchange={handleChange} ></lightning-input>
+                        <lightning-input class="slds-p-left_xx-large" type="checkbox" label=" I ROCK for bringing this to my school! " onchange={handleChange} ></lightning-input>
+                </div>
+
+                <div class="input-div">
+                    <span class="inside-span">Any ideas on how we can reach more schools?  </span>
+                    <div class="inputfield-div">
+                    <lightning-input  class="input-no-border " type="text"   placeholder="Your Answer" name="Enter name"></lightning-input>
+                </div>
+                </div>
+                
+                <div class="last-div">
+                <div class="line-div"> A copy of your responses will be emailed to the address you provided. </div>
+                <div class="las-div">
+                <div class="submitdiv"> <lightning-button variant="success" label="Success" title="Successful action" onclick={handleClick4} class="slds-m-left_x-small"></lightning-button></div>
+                <div class="clearButton-div"> <span class="clearButtonSpan"> clear form</span></div>
+            </div>
+                <!-- <div class="lastline-div">Never submit passwords through Google Forms.</div> -->
+                </div>
+
+
+
+                <!-- <div class="last-div">
+                <div class="profile-div">
+                    <div class="profile-div-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHYt-N-oyQEu0qONjfNvXP6I471_YLIEEJZKMezKldwyN67RVx1drHgA6qqVD5LFFmO0A&usqp=CAU" alt="profile">
+                </div>
+                    <div class="profile-div-img"> <img src="https://i.pinimg.com/736x/95/73/1a/95731a2d0ab3c1851ed7b5328d068b1f.jpg" alt="insta"></div>   
+                </div>
+                </div> -->
+                   
+                <!-- <div class="recaptcha-div">
+                <div class="re-div"></div>
+                  <p>This form was created inside of Let's Go Eco. Report Abuse</p>
+                </div> -->
+         
+            </div>
+            
+        </div>
+    </div>
+</template>

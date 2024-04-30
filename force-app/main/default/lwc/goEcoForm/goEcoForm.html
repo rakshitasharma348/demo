@@ -1,0 +1,43 @@
+<template>
+   <div class="main-div">
+        <div class="img-container div-container"></div>
+         
+   
+   <div class="">
+    <h1>LGE Earth Week Assembly Registration</h1>
+    <ol>
+        <li> Fill out this form </li>
+        <li>We send you the Zoom Webinar based on your form answers (check spam for email from schools@letsgoeco.live!) </li>
+        <li> Your students and staff are empowered and inspired to change the world this Earth Week!</li>
+        <li>Give yourself a pat on the back because YOU ROCK</li>
+    </ol>
+    <p>**If you want to split your school into multiple shows due to scheduling, indicate which grades you want when in the comments section**</p>
+    <div> rakshitasharma348@gmail.com 
+    <a link="Switch account">Switch account</a>
+    </div>
+</div>
+   
+<template for:each={mapObjects} for:item="box">
+    <div class="input-div" key={box}>
+        <span class="M7eMe">  {box.heading} </span>
+        <div class="inputfield-div">
+          <lightning-input  class="--slds-c-input-radius-border: 0rem;" type={box.type}   placeholder="Your Answer" name="Enter name"></lightning-input>
+         </div>
+        </div>
+</template>
+<div class="input-div">
+    <span class="M7eMe"> How Will Your School View The Stream?*  </span>
+    <div >
+        <lightning-input type="radio" label="Option 1" name="Name" value="option1" checked={selectedValue} onchange={handleChange}></lightning-input>
+        <lightning-input type="radio" label="Option 2" name="Name" value="option2" checked={selectedValue} onchange={handleChange}></lightning-input>
+        <lightning-input type="radio" label="Option 3" name="Name" value="option3" checked={selectedValue} onchange={handleChange}></lightning-input>
+    </div>
+</div>
+
+</div>
+<div class="input-div">
+ <lightning-button label="Submit" variant="success"></lightning-button>
+</div>
+ </div>
+ 
+</template>

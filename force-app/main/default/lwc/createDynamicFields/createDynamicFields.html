@@ -1,0 +1,23 @@
+<template>
+        <lightning-card title="Dynamic Input Fields">
+            <div class="slds-p-around_medium">
+                <template for:each={fields} for:item="field" for:index="index">
+                    <div key={field.key} class="slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-input type="text" label="Input 1" value={field.input1} onchange={handleInputChange} data-index={index}></lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-input type="text" label="Input 2" value={field.input2} onchange={handleInputChange} data-index={index}></lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-input type="text" label="Input 3" value={field.input3} onchange={handleInputChange} data-index={index}></lightning-input>
+                        </div>
+                       
+                    </div>
+                </template>
+                <div class="slds-p-top_medium">
+                    <lightning-button label="Add Fields" onclick={handleAddFields} variant="brand"></lightning-button>
+                </div>
+                        </div>
+        </lightning-card>
+    </template>

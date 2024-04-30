@@ -1,0 +1,16 @@
+<apex:page showHeader="false">
+    <apex:includeLightning />
+    <div id="form"></div>
+    <script>
+        $Lightning.use("c:bankformApp", function() {
+            $Lightning.createComponent(
+                "c:finalBank",
+                {},
+                "form",
+                function(cmp) {
+                    console.log("Component Created");
+                }
+            );
+        });
+    </script>
+</apex:page>

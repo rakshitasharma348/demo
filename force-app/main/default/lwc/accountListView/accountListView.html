@@ -1,0 +1,15 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Accounts">
+        <!-- sldsValidatorIgnoreNextLine -->
+        <lightning-datatable
+        key-field="Id"
+        data={accountObj.data}
+        columns={columns}
+        onsave={handleSave}
+        draft-values={fldsItemValues}>
+    </lightning-datatable>
+    
+    </lightning-card>
+    
+</template>

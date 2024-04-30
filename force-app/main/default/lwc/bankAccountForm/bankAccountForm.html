@@ -1,0 +1,90 @@
+<template>
+    <template lwc:if={template2}>
+       <div class="first-div">
+          <div class="slds-grid slds-grid_vertical">
+             <div class="slds-col">
+                <div class="fdiv"></div>
+             </div>
+             <div class="sdiv">
+                <div class="slds-col  sdiv tdiv ">
+                   <div class="gr-div"></div>
+                   <h1  class="content-div">WELCOME TO ONLINE BANK </h1>
+                   <ol>
+                      <li>  1.) Fill out this form to Create New BANK ACCOUNT.  </li>
+                      <li>  2.) Safety & Security Our First Priority </li>
+                      <li>  3.) Invest with Confidence.</li>
+                      <li>  4.) Your Trust. Our Expertise.</li>
+                      <li>Financial Solutions Tailored for You.</li>
+                   </ol>
+                   <br>
+                   <p  class="text-div"> There is  <b>NO COST </b>to your school. Our in-person assembly business, The EcoHero show, is sponsoring the event. </p>
+                   <div class="divContainer"></div>
+                   <div class="red-div"> * Indicates required question</div>
+                </div>
+                <template for:each={mapObjects} for:item="box">
+                   <div class="slds-col  input-div" key={box}>
+                      <lightning-input class="validate"  label={box.heading} name={box.api} value={contactDetail.name}  type={box.type} placeholder="Your Answer" onchange={handleInputChange} pattern={box.pattern} message-when-pattern-mismatch={box.message}  max-length ={box.maxLength} ></lightning-input>
+                   </div>
+                </template>
+                <div class="slds-col input-div">
+                   <label class="slds-scope  slds-form-element__label">              
+                   <span>TYPE OF ACCOUNT</span> <br>
+                   <span> <i>saving/current/fixed deposit</i> </span> <abbr title="required" class="slds-required"><sup>*</sup></abbr> 
+                   </label>
+                   <lightning-combobox  style="font-size: 20px ; white-space: pre-wrap;" variant="label-hidden" required="true" name="Account_Type" value={webinarCheckboxValue} options={optionPicklist} 
+                      onchange={handleInputChange}></lightning-combobox>
+                </div>
+                
+                <!-- <div class=" slds-col input-div ">
+                   <lightning-radio-group name="school_view_the_stream__c" 
+                      class="validate"
+                      required="true"
+                      label="TYPE OF ACCOUNT"
+                      options={radioButtonOptions}
+                      value={streamValue}
+                      type="radio" 
+                      onchange={handleInputChange}></lightning-radio-group>
+                </div> -->
+                <!-- <div class="slds-col input-div  wrapped-content">
+                   <lightning-input  class="wrapped-content validate" label="PHONE NUMBER"
+                      name="PHONE NUMBER"
+                      value={estimateValue}
+                      onchange={handleInputChange}></lightning-input>
+                </div> -->
+                <!-- <div class="slds-col input-div">
+                   <lightning-checkbox-group label="TERMS & CONDITIONS" required="true" name="I_understand_the_following__c" options={checkboxOptionslist}
+                      class="validate"
+                      value={checkboxGroupValue}
+                      onchange={handleInputChange}></lightning-checkbox-group>
+                </div> -->
+                <div class="slds-col  input-div">
+                   <label class="slds-scope  slds-form-element__label">
+                     ChecquBookType<abbr title="required" class="slds-required"><sup>*</sup></abbr> 
+                   </label><br>
+                   <lightning-combobox class="slds-form-element__label  validate"  required="true" variant="label-hidden" name="ChecquBookType" 
+                      value={comboBoxValue} options={checkboxOptionslist} 
+                      onchange={handleInputChange}  ></lightning-combobox>
+                </div>
+                <div class=" slds-col input-div ">
+                   <lightning-input label="Comments/Questions or anything else we should know?" type="text"  placeholder="Your Answer"  name="Comments_Questions__c" value={CommentValue} onchange={handleInputChange} max-length ="255"></lightning-input>
+                </div>
+                <div class="slds-col  input-div" >
+                   <lightning-input label="Any ideas on how we can improve our platform?" type="text" placeholder="Your Answer" name="Ideas__c" value={ideasValue} onchange={handleInputChange}  max-length ="15"></lightning-input>
+                </div>
+                <div class="las-div">
+                   <div class="submitdiv">
+                      <lightning-button variant="success" label="Submit" title="Successful action" onclick={onSubmit} class="slds-m-left_x-small"></lightning-button>
+                   </div>
+                   <!-- <div class="clearButton-div"> <span class="clearButtonSpan"> clear form</span></div> -->
+                   <div class="clearButton-div">
+                      <lightning-button variant="hidden" label="Clear Form" title="Successful action" style="color: azure;" onclick={onclear} ></lightning-button>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </template>
+    <template lwc:else>
+       <div class="completion">Form Submitted Successfully</div>
+    </template>
+ </template>

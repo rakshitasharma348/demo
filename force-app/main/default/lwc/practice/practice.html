@@ -1,0 +1,12 @@
+<template >
+    
+        <lightning-button label="Create field" onclick={handelfield}></lightning-button>
+    <tr style="display: flex; align-items: center;">
+   <td>  <lightning-input type="text"  placeholder="field name"></lightning-input> </td>
+  <td><lightning-input type="text"  placeholder="field api"></lightning-input></td>
+    <td><lightning-input type="text"  placeholder="field desc"></lightning-input></td>
+    <td>   <lightning-button label="delete" onclick={handleDelete} data-id={field}></lightning-button></td>
+   
+    </tr>
+
+</template>

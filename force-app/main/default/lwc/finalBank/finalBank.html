@@ -1,0 +1,225 @@
+<template>
+   <!-- modal start -->      
+   <template if:true={loginModal}>
+
+            <!--
+                I Used SLDS for this code
+                Here is link https://www.lightningdesignsystem.com/components/modals/
+            --> 
+
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <!-- modal header start -->
+          <header class="slds-modal__header"><h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">LOGINr</h1>
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+          </header>
+      
+          <!-- modal body start -->
+           
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+               <!-- <div class="container"> -->
+                
+                
+            <div class="center">
+          <!-- <h1>Login</h1> -->
+          <form action="" method="POST">
+              <div class="txt_field">
+                  <input type="text" name="text" required>
+                  <!-- <span></span> -->
+                  <label>Username</label>
+              </div>
+              <div class="txt_field">
+                  <input type="password" name="password" required>
+                  <!-- <span></span> -->
+                  <label>Password</label>
+              </div>
+              <div class="pass">Forget Password?</div>
+              <input name="submit" type="Submit" value="Login" onclick={callChildComponent}>
+             <div class="signup_link">
+                  Create Account ? <a href="https://anavcloudsoftwaresolutions-dev-ed.develop.lightning.force.com/lightning/o/Dashboard/home?queryScope=mru">Create new Account</a>
+              </div>
+          </form>
+      </div>
+    </div>
+          </div>
+ </div>
+       
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+ </template>
+ <!-- modal end -->
+
+<lightning-card >
+   
+    <div class="backgroundImg" style={getBannnerBackgroundImage}>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <lightning-button variant="neutral" label="Login" title="login" onclick={handleLoginClick}></lightning-button>
+            </ul>
+        </nav>
+    </header> 
+        </div>
+       
+         
+<ol>
+    <li >
+        <div class="icon"><i class="fa-solid fa-bicycle"></i></div>
+        <div class="title">Loans </div>
+        <div class="descr">Loans</div>
+    </li>
+    <li >
+        <div class="icon"><i class="fa-solid fa-car"></i></div>
+        <div class="title">Cards </div>
+        <div class="descr">Cards</div>
+    </li>
+    <li >
+        <div class="icon"><i class="fa-solid fa-helicopter"></i></div>
+        <div class="title">Investments and Deposits </div>
+        <div class="descr">Investments and Deposits</div>
+    </li>
+    <li >
+        <div class="icon"><i class="fa-solid fa-plane"></i></div>
+        <div class="title">Transactions </div>
+        <div class="descr">Transactions</div>
+    </li>
+    <li >
+        <div class="icon"><i class="fa-solid fa-rocket"></i></div>
+        <div class="title">Security </div>
+        <div class="descr">Security</div>
+    </li>
+    <li >
+        <div class="icon"><i class="fa-solid fa-bus"></i></div>
+        <div class="title">Customer Care</div>
+        <div class="descr"></div>
+    </li>
+</ol>
+<!-- <div class="credits">
+    <a target="_blank" href="https://www.freepik.com/premium-vector/vector-infographic-design-template-with-icons-8-options-steps_10571883.htm">inspired by</a>
+</div>  -->
+
+
+<div class="flex">
+<div class="card card-body1">
+	<div class="card__info">
+		<div class="card__logo">PlasticIsShiny</div>
+		<div class="card__chip">
+			<svg class="card__chip-lines" role="img" width="20px" height="20px" viewBox="0 0 100 100" aria-label="Chip">
+				<g opacity="0.8">
+					<polyline points="0,50 35,50" fill="none" stroke="#000" stroke-width="2" />
+					<polyline points="0,20 20,20 35,35" fill="none" stroke="#000" stroke-width="2" />
+					<polyline points="50,0 50,35" fill="none" stroke="#000" stroke-width="2" />
+					<polyline points="65,35 80,20 100,20" fill="none" stroke="#000" stroke-width="2" />
+					<polyline points="100,50 65,50" fill="none" stroke="#000" stroke-width="2" />
+					<polyline points="35,35 65,35 65,65 35,65 35,35" fill="none" stroke="#000" stroke-width="2" />
+					<polyline points="0,80 20,80 35,65" fill="none" stroke="#000" stroke-width="2" />
+					<polyline points="50,100 50,65" fill="none" stroke="#000" stroke-width="2" />
+					<polyline points="65,65 80,80 100,80" fill="none" stroke="#000" stroke-width="2" />
+				</g>
+			</svg>
+			<div class="card__chip-texture"></div>
+		</div>
+		<div class="card__type">debit</div>
+		<div class="card__number">
+			<span class="card__digit-group">0000</span>
+			<span class="card__digit-group">0021</span>
+			<span class="card__digit-group">4748</span>
+			<span class="card__digit-group">3647</span>
+		</div>
+		<div class="card__valid-thru" aria-label="Valid thru">Valid<br>thru</div>
+		<div class="card__exp-date"><time datetime="2038-01">01/38</time></div>
+		<div class="card__name" aria-label="Dee Stroyer">Dee Stroyer</div>
+		<div class="card__vendor" role="img" aria-labelledby="card-vendor">
+			<span id="card-vendor" class="card__vendor-sr">Mastercard</span>
+		</div>
+	</div>
+	<div class="card__texture"></div>
+</div></div>
+
+
+
+
+
+            <div class="flex">    
+            <div class="backgroundMapImg" style={getMapBackgroundImage} >
+            <div class="textoverlay">
+                Our Branches 
+            </div>
+        </div>
+        </div>
+        <div class="footer">
+     
+      <div class="content">
+        <div class="services">
+          <h4>Services</h4>
+          <p><a href="#">Accounts</a></p>
+          <p><a href="#">Investments & Deposits</a></p>
+          <p><a href="#">Loans</a></p>
+          <p><a href="#">Cards</a></p>
+        </div>
+        <div class="social-media">
+          <h4>Social</h4>
+          <p>
+            <a href="#"
+              ><i class="fab fa-linkedin"></i> Linkedin</a
+            >
+          </p>
+          <p>
+            <a href="#"
+              ><i class="fab fa-twitter"></i> Twitter</a
+            >
+          </p>
+          <p>
+            <a href="https://github.com/farazc60"
+              ><i class="fab fa-github"></i> Github</a
+            >
+          </p>
+          <p>
+            <a href="https://www.facebook.com/codewithfaraz"
+              ><i class="fab fa-facebook"></i> Facebook</a
+            >
+          </p>
+          <p>
+            <a href="https://www.instagram.com/codewithfaraz"
+              ><i class="fab fa-instagram"></i> Instagram</a
+            >
+          </p>
+        </div>
+        <div class="links">
+          <h4>Quick links</h4>
+          <p><a href="#">Home</a></p>
+          <p><a href="#">About</a></p>
+          <p><a href="#">Blogs</a></p>
+          <p><a href="#">Contact</a></p>
+        </div>
+        <div class="details">
+          <h4 class="address">Address</h4>
+          <p>
+            Headquarter - In Jaipur
+          </p>
+          <h4 class="mobile">Mobile</h4>
+          <p><a href="#">+91-9872347865</a></p>
+          <h4 class="mail">Email</h4>
+          <p><a href="#">rakshita568@gmail.com</a></p>
+        </div>
+      </div>
+      <footer>
+        <hr />
+       Main Street Bank [ APM ID: L&A_Info_344 ]. All Right Reserved
+      </footer>
+    </div>
+</lightning-card>
+
+
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Add Contact to Account">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Contact Name" value={contactName} onchange={handleContactNameChange}></lightning-input>
+            <lightning-input type="checkbox" label="IsPrimary" onchange={handlePrimaryCheckbox}>
+            </lightning-input>
+            <lightning-button label="Add Contact" onclick={handleAddContact}></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-record-edit-form object-api-name="Contact" onsuccess={handleSuccess}>
+        <div class="slds-p-around_medium">
+            <lightning-input-field field-name="AccountId" value={accountId}></lightning-input-field>
+            <lightning-input-field field-name="Name" value={contactName}></lightning-input-field>
+            <lightning-input-field field-name="Is_Primary__c" type="checkbox" checked={isPrimary}></lightning-input-field>
+            <lightning-button type="submit" label="Save"></lightning-button>
+        </div>
+    </lightning-record-edit-form>
+</template>

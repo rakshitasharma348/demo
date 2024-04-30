@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Time Sheet Entry">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Generate Time Sheet" onclick={generateTimeSheet}></lightning-button>
+        </div>
+        <template if:true={timeSheetData}>
+            <lightning-datatable
+                key-field="Id"
+                data={timeSheetData}
+                columns={columns}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
