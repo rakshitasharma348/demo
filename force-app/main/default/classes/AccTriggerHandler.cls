@@ -1,5 +1,6 @@
 public class AccTriggerHandler {
     @future(Callout=true)
+//haaye haaye hoye hoye banjubindi banjubindi
     public static void handle( List<Id> accountIds){
         String accessToken = 'Bearer sk_test_51OZBiySHI1QJK6jTlbHsRodgXW7fZSwqqAYnD2ESjouaL1CCFHdQ6LlQR8uHzD2dl8pfqjQjLoexcSJ4Or1HzVnL00wDHkmIpw';        
         HttpRequest request = new HttpRequest();
