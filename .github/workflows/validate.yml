@@ -14,7 +14,7 @@ jobs:
       - name: Validate on ${{ vars.ENVIRONMENT_NAME }}
         uses: jawills/sf-deploy@v1.0
         with:
-          SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL_PRODUCTION }}
+          SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL }}
           DRY_RUN: true
 
 
