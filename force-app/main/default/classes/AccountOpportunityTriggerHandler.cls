@@ -31,6 +31,7 @@ public class AccountOpportunityTriggerHandler {
 
         if (!newOpportunities.isEmpty()) {
             insert newOpportunities;
+            //rakshitaSharma
         }
     }
 }
