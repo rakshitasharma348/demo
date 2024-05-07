@@ -1,5 +1,4 @@
-[Friday 12:20] Anurag Sharma
-name: Run Test Classes
+name: deply with github
 # deploy on push
 on:
   push:
