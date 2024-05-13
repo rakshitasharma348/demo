@@ -3,6 +3,7 @@ public  class ClassForGithub {
         //hii
         //hloo
         //firse hloo
+        //hello again
         return [SELECT Id, IsDeleted, MasterRecordId, Name, Type, ParentId, BillingStreet, BillingCity, BillingState, BillingPostalCode FROM Account WHERE Name =: inpName Limit 1];
     }
     
