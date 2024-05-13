@@ -1,4 +1,4 @@
-name:deply-On-Push
+name: deply-on-push
 on:
   push:
     paths:
