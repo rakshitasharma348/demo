@@ -1,4 +1,4 @@
-name:deplyOnPush
+name:deply-On-Push
 # deploy on push
 on:
   push:
