@@ -1,5 +1,4 @@
 name:deply-On-Push
-# deploy on push
 on:
   push:
     paths:
