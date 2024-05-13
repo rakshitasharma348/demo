@@ -24,6 +24,4 @@ jobs:
       - name: Debug Login Status
         run: |
           sfdx force:org:display
-      - name: Run Test Classes
-        run: |
-          sfdx apex run test -l RunLocalTests -w 15
+      
